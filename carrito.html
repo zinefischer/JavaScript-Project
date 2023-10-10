@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="stock.js" defer></script>
+    <script src="carrito.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Fanático futbolero.</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <button class="btn-back"><a href="./index.html">VOLVER AL INICIO</a></button>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="contenedor">
+
+            <h1 class="texto-principal">CARRITO</h1>
+            <div class="contenedor-carrito">
+                <p id="empty-cart" class="empty-cart">Tu carrito está vacio</p>
+
+                <div id="productos-carrito"  class="productos-carrito">
+
+                    <div class="producto-carrito">
+                        <img class="producto-imagen-carrito" src="./assets/images/camisetas/arsenal.jpg" alt="Arsenal">
+                        <div>
+                            <small>TITULO</small>
+                            <h3>ARSENAL</h3>
+                        </div>
+                        <div class="producto-cantidad-carrito">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="producto-precio-carrito">
+                            <small>Precio</small>
+                            <p>$1000</p>
+                        </div>
+                        <div>
+                            <small>Subtotal</small>
+                            <p>$1000</p>
+                        </div>
+                        <button class="producto-eliminar-carrito"><img src="./assets/images/iconos/trash.png"
+                                alt="Eliminar">
+                        </button>
+                    </div>
+                    <div class="producto-carrito">
+                        <img class="producto-imagen-carrito" src="./assets/images/camisetas/arsenal.jpg" alt="Arsenal">
+                        <div>
+                            <small>TITULO</small>
+                            <h3>ARSENAL</h3>
+                        </div>
+                        <div class="producto-cantidad-carrito">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="producto-precio-carrito">
+                            <small>Precio</small>
+                            <p>$1000</p>
+                        </div>
+                        <div>
+                            <small>Subtotal</small>
+                            <p>$1000</p>
+                        </div>
+                        <button class="producto-eliminar-carrito"><img src="./assets/images/iconos/trash.png"
+                                alt="Eliminar">
+                        </button>
+                    </div>
+                    <div class="producto-carrito">
+                        <img class="producto-imagen-carrito" src="./assets/images/camisetas/arsenal.jpg" alt="Arsenal">
+                        <div>
+                            <small>TITULO</small>
+                            <h3>ARSENAL</h3>
+                        </div>
+                        <div class="producto-cantidad-carrito">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="producto-precio-carrito">
+                            <small>Precio</small>
+                            <p>$1000</p>
+                        </div>
+                        <div>
+                            <small>Subtotal</small>
+                            <p>$1000</p>
+                        </div>
+                        <button id="producto-eliminar-carrito" class="producto-eliminar-carrito"><img src="./assets/images/iconos/trash.png"
+                                alt="Eliminar">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrito-confirmar">
+                <div class="subtotal-carrito">
+                    <p>Total</p>
+                    <p id="total">$1000</p>
+                </div>
+                <button class="confirmar-compra">Comprar ahora</button>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer class="texto-footer">
+        <p>© 2023 Fanático futbolero</p>
+    </footer>
+
+</body>
+
+</html>

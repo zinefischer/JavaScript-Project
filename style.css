@@ -1,0 +1,242 @@
+:root {
+    --clr-main: #333333;
+    --clr-cart: #4A4A48;
+    --clr-sec: #706C61;
+    --clr-font-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* BODY */
+
+body {
+    background-color: var(--clr-main);
+    display: grid;
+    grid-template-rows: .1fr 4fr .1fr;
+}
+
+/* HEADER */
+
+header {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    color: var(--clr-font-color);
+}
+
+.btn-menu {
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-font-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.btn-menu.active {
+    background-color: var(--clr-sec);
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.btn-cart {
+    margin-left: 2rem;
+    background-color: transparent;
+    border: 0;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.btn-back {
+    background-color: var(--clr-sec);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.btn-back a {
+    color: var(--clr-font-color);
+    text-decoration: none;
+}
+
+/* MAIN */
+
+main {
+    background-color: var(--clr-sec);
+    margin: 1rem;
+    margin-top: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.texto-principal {
+    color: var(--clr-font-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.producto {
+    padding: .3rem;
+    text-align: center;
+    color: #D5CEA3;
+}
+
+.producto-imagen {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.producto-detalles {
+    background-color: var(--clr-main);
+    margin-top: -1.7rem;
+    padding: .5rem;
+    position: relative;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.producto-titulo {
+    color: var(--clr-font-color);
+    font-size: 1rem;
+}
+
+.producto-precio {
+    color: var(--clr-font-color);
+}
+
+.producto-agregar {
+    background-color: var(--clr-font-color);
+    border: 0;
+    cursor: pointer;
+    padding: .5rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    border: 2px solid var(--clr-sec);
+    transition: background-color .3s, color .3s;
+}
+
+.producto-agregar:hover {
+    background-color: var(--clr-main);
+    color: var(--clr-font-color);
+}
+
+/* FOOTER */
+
+.texto-footer {
+    color: var(--clr-font-color);
+    margin: 2rem;
+    text-align: center;
+}
+
+/* CARRITO */
+
+.empty-cart {
+    display: none;
+}
+
+.productos-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.producto-carrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: var(--clr-cart);
+    gap: 3rem;
+    color: var(--clr-font-color);
+
+}
+
+.producto-imagen-carrito {
+    width: 5rem;
+    border-radius: 1rem;
+}
+
+.producto-eliminar-carrito {
+    border: 0;
+    background-color: transparent;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.carrito-confirmar {
+    display: flex;
+    font-display: row;
+    justify-content: right;
+    margin: 2rem;
+}
+
+.subtotal-carrito {
+    background-color: var(--clr-cart);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: var(--clr-font-color);
+}
+
+.confirmar-compra {
+    border: 0;
+    padding: 1rem;
+    background-color: var(--clr-main);
+    cursor: pointer;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    color: var(--clr-font-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 2px solid var(--clr-cart);
+    transition: background-color .3s, color .3s;
+}
+
+
+.confirmar-compra:hover {
+    background-color: var(--clr-sec);
+    color: var(--clr-font-color);
+}
