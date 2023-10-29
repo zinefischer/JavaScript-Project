@@ -20,7 +20,6 @@ a {
 }
 
 /* BODY */
-
 body {
     background-color: var(--clr-main);
     display: grid;
@@ -28,7 +27,6 @@ body {
 }
 
 /* HEADER */
-
 header {
     padding: 2rem;
     display: flex;
@@ -59,12 +57,17 @@ header {
     padding: 1rem;
     font-size: 1.3rem;
     width: 100%;
+    border-bottom: 5px solid transparent;
+}
+
+.btn-menu:hover {
+    border-bottom: 5px solid var(--clr-sec);
+    transition: border .5s;
 }
 
 .btn-menu.active {
-    background-color: var(--clr-sec);
+    border-bottom: 5px solid var(--clr-sec);
     width: 100%;
-    border-radius: 1rem;
 }
 
 .btn-cart {
@@ -74,13 +77,24 @@ header {
     padding: 1rem;
     gap: 1rem;
     width: 100%;
+    cursor: pointer;
+}
+
+.carrito-contador {
+    color: var(--clr-font-color);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--clr-sec);
+    padding: .3rem;
+    border-radius: 1rem;
 }
 
 .btn-back {
     background-color: var(--clr-sec);
+    color: white;
+    border: 2px solid white;
     border-radius: 1rem;
     cursor: pointer;
-    font-weight: 600;
     padding: 1rem;
     font-size: 1rem;
 }
@@ -91,7 +105,6 @@ header {
 }
 
 /* MAIN */
-
 main {
     background-color: var(--clr-sec);
     margin: 1rem;
@@ -113,6 +126,14 @@ main {
 }
 
 .producto {
+    transition: 0.5s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto {
     padding: .3rem;
     text-align: center;
     color: #D5CEA3;
@@ -121,6 +142,7 @@ main {
 .producto-imagen {
     max-width: 100%;
     border-radius: 1rem;
+
 }
 
 .producto-detalles {
@@ -160,7 +182,6 @@ main {
 }
 
 /* FOOTER */
-
 .texto-footer {
     color: var(--clr-font-color);
     margin: 2rem;
@@ -168,9 +189,13 @@ main {
 }
 
 /* CARRITO */
-
 .empty-cart {
-    display: none;
+    color: var(--clr-font-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
 }
 
 .productos-carrito {
@@ -184,12 +209,17 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: .5rem;
+    margin: 1rem;
     border-radius: 1rem;
     background-color: var(--clr-cart);
     gap: 3rem;
     color: var(--clr-font-color);
+}
 
+.producto-titulo-carrito {
+    text-transform: uppercase;
 }
 
 .producto-imagen-carrito {
@@ -212,6 +242,10 @@ main {
 }
 
 .subtotal-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7rem;
     background-color: var(--clr-cart);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
@@ -231,12 +265,81 @@ main {
     color: var(--clr-font-color);
     font-weight: 600;
     font-size: 1.2rem;
-    border: 2px solid var(--clr-cart);
+    border: 1px solid var(--clr-cart);
     transition: background-color .3s, color .3s;
 }
-
 
 .confirmar-compra:hover {
     background-color: var(--clr-sec);
     color: var(--clr-font-color);
+}
+
+/* MODAL */
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+}
+
+.modal-carrito {
+    background-color: var(--clr-main);
+    margin: auto;
+    width: 90%;
+    max-width: 100%;
+    max-height: 90%;
+    border-radius: 2rem;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-columns: 100%;
+    overflow: auto;
+    border: .15rem solid var(--clr-sec);
+}
+
+.modal-active {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .3s;
+    background-color: hsla(0, 0%, 0%, 0.8)
+}
+
+.btn-contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.btn-close-cart {
+    width: 10rem;
+    height: 3rem;
+    background-color: var(--clr-main);
+    color: var(--clr-font-color);
+    cursor: pointer;
+    padding: .5rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0;
+    border-radius: 2rem;
+    border: 2px solid var(--clr-sec);
+    transition: background-color .3s, color .3s;
+}
+
+.btn-close-cart:hover {
+    background-color: var(--clr-sec);
+    color: var(--clr-font-color);
+}
+
+.disabled {
+    display: none;
+}
+
+.border-radius-0 {
+    border-radius: 2rem;
 }

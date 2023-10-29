@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="stock.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="carrito.js" defer></script>
     <title>Document</title>
 </head>
@@ -17,7 +16,8 @@
         <nav>
             <ul>
                 <li>
-                    <button class="btn-back"><a href="./index.html">VOLVER AL INICIO</a></button>
+                    <button class="btn-back"><a href="./index.html"><img src="./assets/images/iconos/back-arrow.png"
+                                alt="back-arrow"></a></button>
                 </li>
             </ul>
         </nav>
@@ -32,7 +32,7 @@
             <div class="contenedor-carrito">
                 <p id="empty-cart" class="empty-cart">Tu carrito está vacio</p>
 
-                <div id="productos-carrito"  class="productos-carrito">
+                <div id="productos-carrito" class="productos-carrito">
 
                     <div class="producto-carrito">
                         <img class="producto-imagen-carrito" src="./assets/images/camisetas/arsenal.jpg" alt="Arsenal">
@@ -75,28 +75,6 @@
                             <p>$1000</p>
                         </div>
                         <button class="producto-eliminar-carrito"><img src="./assets/images/iconos/trash.png"
-                                alt="Eliminar">
-                        </button>
-                    </div>
-                    <div class="producto-carrito">
-                        <img class="producto-imagen-carrito" src="./assets/images/camisetas/arsenal.jpg" alt="Arsenal">
-                        <div>
-                            <small>TITULO</small>
-                            <h3>ARSENAL</h3>
-                        </div>
-                        <div class="producto-cantidad-carrito">
-                            <small>Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="producto-precio-carrito">
-                            <small>Precio</small>
-                            <p>$1000</p>
-                        </div>
-                        <div>
-                            <small>Subtotal</small>
-                            <p>$1000</p>
-                        </div>
-                        <button id="producto-eliminar-carrito" class="producto-eliminar-carrito"><img src="./assets/images/iconos/trash.png"
                                 alt="Eliminar">
                         </button>
                     </div>

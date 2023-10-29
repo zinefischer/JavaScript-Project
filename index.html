@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="stock.js" defer></script>
-    <script src="main.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- SCRIPT -->
+    <script src="./javascript/carrito.js" defer></script>
+    <script src="./javascript/modal.js" defer></script>
+    <script src="./javascript/main.js" defer></script>
     <title>Fanatico Futbolero</title>
 </head>
 
@@ -29,8 +34,8 @@
                     <button id="zapatos" class="btn-menu">Zapatos</button>
                 </li>
                 <li>
-                    <button class="btn-cart"><a href="./carrito.html"><img
-                                src="./assets/images/iconos/shopping-cart.png" alt="Cart"></a></button>
+                    <button class="btn-cart" id="btn-cart"><img src="./assets/images/iconos/shopping-cart.png"
+                            alt="Cart"><span class="carrito-contador" id="carrito-cantidad">0</span></button>
                 </li>
             </ul>
         </nav>
@@ -48,9 +53,39 @@
         </div>
     </main>
 
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+
+            <div class="btn-contenedor">
+                <h1 class="texto-principal">CARRITO</h1>
+                <button class="btn-close-cart" id="close-cart">Cerrar</button>
+            </div>
+
+
+            <div class="contenedor-carrito" id="contenedor-carrito">
+                <p id="empty-cart" class="empty-cart">Tu carrito está vacio</p>
+                <!-- ESTO SE COMPLETA CON JS -->
+            </div>
+
+            <div id="carrito-confirmar" class="carrito-confirmar disabled">
+                <div id="subtotal-carrito" class="subtotal-carrito">
+                    <p>Total:</p>
+                    <p id="total">$1000</p>
+                </div>
+                <button id="confirmar-compra" class="confirmar-compra">Comprar</button>
+            </div>
+
+        </div>
+    </div>
+
     <footer class="texto-footer">
         <p>© 2023 Fanático futbolero</p>
     </footer>
+
+    <!-- SWEET ALERT  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>
 
